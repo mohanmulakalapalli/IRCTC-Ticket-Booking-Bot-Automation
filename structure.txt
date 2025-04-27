@@ -1,0 +1,41 @@
+irctc_tatkal_bot/
+│
+├── main.py                 # Entry point for the automation script
+├── pytest.ini              # Pytest configuration file
+├── README.md               # Project documentation
+├── requirements.txt        # Python dependencies
+├── .gitignore              # Git ignore file
+│
+├── mock_site/              # Mock HTML pages simulating the IRCTC website
+│   ├── booking.html
+│   ├── login.html
+│   ├── payment.html
+│   └── search.html
+│
+├── pages/                  # Selenium Page Object Model scripts
+│   ├── booking_page.py
+│   ├── login_page.py
+│   ├── search_page.py
+│   └── __init__.py         # Makes the directory a Python package
+│
+├── report/                 # Test reports and related assets
+│   ├── test_report.html
+│   ├── test_report_booking.html
+│   ├── test_report_login.html
+│   ├── test_report_search.html
+│   ├── assets/             # Static assets for reports
+│   │   └── style.css
+│   └── archived/           # Optional: Archive old reports
+│
+├── tests/                  # Pytest test cases
+│   ├── test_login.py
+│   ├── test_booking.py
+│   ├── test_search.py
+│   └── __init__.py         # Makes the directory a Python package
+│
+├── .vscode/                # VS Code-specific settings
+│   └── settings.json
+│
+├── __pycache__/            # Python bytecode cache (auto-generated)
+│
+└── .pytest_cache/          # Pytest cache (auto-generated)
