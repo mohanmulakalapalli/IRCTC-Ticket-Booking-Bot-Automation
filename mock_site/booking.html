@@ -1,12 +1,36 @@
 <html><head><title>Booking</title></head>
 <body>
 <h2>Booking Details</h2>
-<form>
-  <input type="text" placeholder="Passenger Name"><br>
-  <input type="number" placeholder="Age"><br>
-  <select><option>Male</option><option>Female</option></select><br>
-  <input type="number" placeholder="Train Number"><br>
-  <select><option>General</option><option>Tatkal</option></select><br>
-  <button type="button" onclick="window.location.href='payment.html'">Proceed to Pay</button>
+<form id="bookingForm">
+  <input type="text" id="passengerName" placeholder="Passenger Name"><br>
+  <input type="number" id="age" placeholder="Age"><br>
+  <select id="gender">
+    <option>Male</option>
+    <option>Female</option>
+  </select><br>
+  <input type="number" id="trainNumber" placeholder="Train Number"><br>
+  <select id="ticketType">
+    <option>General</option>
+    <option>Tatkal</option>
+  </select><br>
+  <button type="button" onclick="proceedToPay()">Proceed to Pay</button>
 </form>
+
+<script>
+  function proceedToPay() {
+    const bookingDetails = {
+      passengerName: document.getElementById('passengerName').value,
+      age: document.getElementById('age').value,
+      gender: document.getElementById('gender').value,
+      trainNumber: document.getElementById('trainNumber').value,
+      ticketType: document.getElementById('ticketType').value
+    };
+
+    // Store booking details in localStorage
+    localStorage.setItem('bookingDetails', JSON.stringify(bookingDetails));
+
+    // Redirect to payment page
+    window.location.href = 'payment.html';
+  }
+</script>
 </body></html>

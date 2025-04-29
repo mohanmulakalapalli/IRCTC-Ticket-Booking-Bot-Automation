@@ -2,13 +2,14 @@ import pytest
 from pages.login_page import LoginPage
 from pages.search_page import SearchPage
 from pages.booking_page import BookingPage
+from pages.payment_page import PaymentPage
 from tests.driver_setup import driver_setup
 
 # URL Constants
-URL_Login = "D:/OS/Desktop/Learming_Saftware_Related/Python_Automation_project/irctc_tatkal_bot/mock_site/login.html"
-URL_Search = "D:/OS/Desktop/Learming_Saftware_Related/Python_Automation_project/irctc_tatkal_bot/mock_site/search.html"
-URL_Booking = "D:/OS/Desktop/Learming_Saftware_Related/Python_Automation_project/irctc_tatkal_bot/mock_site/booking.html"
-URL_Payment = "D:/OS/Desktop/Learming_Saftware_Related/Python_Automation_project/irctc_tatkal_bot/mock_site/payment.html"
+URL_Login = "file:///D:/OS/Desktop/Learning_Software_Related/Python_Automation_project/irctc_tatkal_bot/mock_site/login.html"
+URL_Search = "file:///D:/OS/Desktop/Learning_Software_Related/Python_Automation_project/irctc_tatkal_bot/mock_site/search.html"
+URL_Booking = "D:/OS/Desktop/Learning_Software_Related/Python_Automation_project/irctc_tatkal_bot/mock_site/booking.html"
+URL_Payment = "D:/OS/Desktop/Learning_Software_Related/Python_Automation_project/irctc_tatkal_bot/mock_site/payment.html"
 
 class TestTatkalBooking:
     
@@ -41,7 +42,7 @@ class TestTatkalBooking:
         self.driver = driver_setup
         self.driver.get(URL_Booking)
         self.booking = BookingPage(self.driver)
-        self.booking.enter_passenger_details("Ravi", "28", "123654")
+        self.booking.enter_passenger_details("Ravi", "28", "Male", "123654", "Tatkal")
         print("Booking successful")
         assert "Booking" in self.driver.page_source or self.driver.title
         
@@ -51,5 +52,14 @@ class TestTatkalBooking:
     def test_payment_page(self, driver_setup):
         self.driver = driver_setup
         self.driver.get(URL_Payment)
-        assert "Payment" in self.driver.page_source or self.driver.title 
+        
+        # Create an instance of PaymentPage
+        self.payment_page = PaymentPage(self.driver)
+        # Get Booking and PNR elements
+        self.booking, self.pnr = self.payment_page.payment(None, None)
         print("Payment successful")
+        # Print the text of Booking and PNR
+        print(self.booking.text)
+        print(self.pnr.text)
+        assert "Payment" in self.driver.page_source or self.driver.title 
+        

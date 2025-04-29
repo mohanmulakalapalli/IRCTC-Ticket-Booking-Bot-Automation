@@ -1,5 +1,42 @@
+<!DOCTYPE html>
+<!-- This is a simple HTML page for the payment section of the IRCTC Tatkal Bot -->
+<!-- It retrieves booking details from localStorage and displays them along with a random PNR, coach, and berth position -->
+<!-- The page is designed to be user-friendly and informative, providing a summary of the booking and payment status -->
+<!-- The script generates random PNR, coach, and berth position for demonstration purposes -->
 <html><head><title>Payment</title></head>
 <body>
 <h2>Payment Page</h2>
-<p>Payment Simulation... Booking Successful!</p>
+<p>Payment Successful!</p>
+<p id="bookingSummary"></p>
+<p id="pnrDetails"></p>
+
+<script>
+  // Retrieve booking details from localStorage
+  const bookingDetails = JSON.parse(localStorage.getItem('bookingDetails'));
+
+  if (bookingDetails) {
+    // Display booking details
+    document.getElementById('bookingSummary').innerText = `
+      Passenger Name: ${bookingDetails.passengerName}
+      Age: ${bookingDetails.age}
+      Gender: ${bookingDetails.gender}
+      Train Number: ${bookingDetails.trainNumber}
+      Ticket Type: ${bookingDetails.ticketType}
+    `;
+
+    // Generate random PNR, coach, and berth position
+    const pnr = 'PNR-' + Math.floor(1000000000 + Math.random() * 9000000000);
+    const coach = 'Coach-' + Math.floor(1 + Math.random() * 20);
+    const berth = 'Berth-' + ['Lower', 'Middle', 'Upper'][Math.floor(Math.random() * 3)];
+
+    // Display PNR details
+    document.getElementById('pnrDetails').innerText = `
+      PNR: ${pnr}
+      Coach: ${coach}
+      Berth: ${berth}
+    `;
+  } else {
+    document.getElementById('bookingSummary').innerText = 'No booking details found.';
+  }
+</script>
 </body></html>
