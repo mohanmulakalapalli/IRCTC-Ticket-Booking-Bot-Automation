@@ -3,57 +3,91 @@ from pages.login_page import LoginPage
 from pages.search_page import SearchPage
 from pages.booking_page import BookingPage
 from pages.payment_page import PaymentPage
+from pages.test_data import URL_Login, username, password
 import time
+import os
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
 
 
-# Initialize the WebDriver
-driver = webdriver.Chrome()
+class IRCTCTatkalBot:
+    def __init__(self):
+        self.driver = webdriver.Chrome()
+        self.screenshots_dir = "report/screenshots"
+        os.makedirs(self.screenshots_dir, exist_ok=True)  # Ensure the directory exists
 
-try:
-    # Step 1: Open the mock login page
-    driver.get("D:/OS/Desktop/Learning_Software_Related/Python_Automation_project/irctc_tatkal_bot/mock_site/login.html")  
+    def take_screenshot(self, filename):
+        screenshot_path = os.path.join(self.screenshots_dir, filename)
+        self.driver.save_screenshot(screenshot_path)
+        print(f"Screenshot saved at: {screenshot_path}")
 
-    # Step 2: Perform login
-    login_page = LoginPage(driver)
-    login_page.login("testuser", "testpass")
-    time.sleep(2)
+    def open_login_page(self):
+        self.driver.get(URL_Login)
+        self.driver.maximize_window()
+        time.sleep(2)  # Wait for the page to load
+        self.take_screenshot("main_login.png")
 
-    # Step 3: Navigate to the search page and search for trains
-    search_page = SearchPage(driver)
-    search_page.search_trains("Delhi", "Mumbai", "2025-05-01")
-    time.sleep(2)
+    def perform_login(self):
+        login_page = LoginPage(self.driver)
+        captcha_text = login_page.get_captcha_text()
+        login_page.login(username, password, captcha_text)
+        login_page.accept_alert()
+        time.sleep(2)
 
-    # Step 4: Select a train and proceed to booking
-    booking_page = BookingPage(driver)
-    # Enter passenger details one by one
-    passengers = [
-        {"name": "rajat Doe", "age": "32", "gender":"Male", "train_number": "12345","ticket_type":"Tatkal"}
-    ]
+    def search_trains(self, source, destination, travel_date):
+        self.take_screenshot("main_search.png")
+        search_page = SearchPage(self.driver)
+        search_page.search_trains(source, destination, travel_date)
+        time.sleep(2)
 
-    for passenger in passengers:
-        # Wait for the passenger name input field to be visible
-        WebDriverWait(driver, 10).until(
-            EC.presence_of_element_located((By.XPATH, "//input[@placeholder='Passenger Name']"))
-        )
-        booking_page.enter_passenger_details(
-            passenger["name"], passenger["age"], passenger["gender"], passenger["train_number"], passenger["ticket_type"]
-        )
-        time.sleep(1)  
+    def book_tickets(self, passengers):
+        self.take_screenshot("main_booking.png")
+        booking_page = BookingPage(self.driver)
 
-    print("Ticket booking flow completed successfully!")
-    
-    # Create an instance of PaymentPage
-    payment_page = PaymentPage(driver)
-    # Get Booking and PNR elements
-    booking, pnr = payment_page.payment(None, None)
+        for passenger in passengers:
+            WebDriverWait(self.driver, 10).until(
+                EC.presence_of_element_located((By.XPATH, "//input[@placeholder='Passenger Name']"))
+            )
+            booking_page.enter_passenger_details(
+                passenger["name"], passenger["age"], passenger["gender"],
+                passenger["train_number"], passenger["ticket_type"]
+            )
+            time.sleep(1)
 
-    # Print the text of Booking and PNR
-    print(booking.text)
-    print(pnr.text)
+        print("Ticket booking flow completed successfully!")
 
-finally:
-    # Close the browser
-    driver.quit()
+    def process_payment(self):
+        payment_page = PaymentPage(self.driver)
+
+        # Get passenger details
+        passenger_details = payment_page.get_passenger_details()
+        print("Passenger Details:")
+        for key, value in passenger_details.items():
+            print(f"{key.capitalize()}: {value}")
+
+        # Get ticket information
+        ticket_info = payment_page.get_ticket_info()
+        print("\nTicket Information:")
+        for key, value in ticket_info.items():
+            print(f"{key.capitalize()}: {value}")
+
+        self.take_screenshot("main_E_ticket.png")
+
+    def run(self):
+        try:
+            self.open_login_page()
+            self.perform_login()
+            self.search_trains("Delhi", "Mumbai", "2025-05-01")
+            passengers = [
+                {"name": "rajat Doe", "age": "32", "gender": "Male", "train_number": "12345", "ticket_type": "Tatkal"}
+            ]
+            self.book_tickets(passengers)
+            self.process_payment()
+        finally:
+            self.driver.quit()
+
+
+if __name__ == "__main__":
+    bot = IRCTCTatkalBot()
+    bot.run()
