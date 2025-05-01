@@ -1,5 +1,6 @@
 import pytest
 from selenium import webdriver
+from pages.test_data import URL_Login
 from selenium.webdriver.chrome.service import Service
 
 @pytest.fixture(scope="function")
@@ -8,6 +9,7 @@ def driver_setup():
     service = Service(r"C:/Drivers/Chrome/chromedriver.exe")
     driver = webdriver.Chrome(service=service)
     driver.implicitly_wait(10)
-    driver.get("file:///D:/OS/Desktop/Learning_Software_Related/Python_Automation_project/irctc_tatkal_bot/mock_site/login.html")
+    driver.get(URL_Login)
+    driver.maximize_window()
     yield driver
     driver.quit()

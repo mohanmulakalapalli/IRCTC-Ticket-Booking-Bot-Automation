@@ -1,42 +1,156 @@
 <!DOCTYPE html>
-<!-- This is a simple HTML page for the payment section of the IRCTC Tatkal Bot -->
-<!-- It retrieves booking details from localStorage and displays them along with a random PNR, coach, and berth position -->
-<!-- The page is designed to be user-friendly and informative, providing a summary of the booking and payment status -->
-<!-- The script generates random PNR, coach, and berth position for demonstration purposes -->
-<html><head><title>Payment</title></head>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>IRCTC E-TICKET</title>
+  <link href="https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Comic Neue', cursive;
+      background: url('pay_bg.jpg') no-repeat center center fixed;
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 40px;
+    }
+
+    .ticket {
+      background: rgba(255, 255, 255, 0.95);
+      border: 5px dotted #ff69b4;
+      border-radius: 25px;
+      padding: 30px;
+      max-width: 650px;
+      width: 100%;
+      box-shadow: 6px 6px 20px rgba(0,0,0,0.25);
+    }
+
+    h1 {
+      text-align: center;
+      color: #d32f2f;
+      font-size: 2em;
+    }
+
+    .success {
+      color: #2e7d32;
+      font-weight: bold;
+      text-align: center;
+      font-size: 1.3em;
+      margin-bottom: 15px;
+    }
+
+    .section {
+      margin: 15px 0;
+      padding: 10px 0;
+    }
+
+    .section-title {
+      font-weight: bold;
+      font-size: 1.2em;
+      border-bottom: 2px dashed #aaa;
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+    .info-line {
+      margin: 6px 0;
+      font-size: 1.1em;
+    }
+
+    .qr {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .note {
+      text-align: center;
+      font-size: 0.9em;
+      color: #555;
+      margin-top: 20px;
+    }
+
+    img {
+      border: 4px solid #ccc;
+      border-radius: 12px;
+    }
+  </style>
+</head>
 <body>
-<h2>Payment Page</h2>
-<p>Payment Successful!</p>
-<p id="bookingSummary"></p>
-<p id="pnrDetails"></p>
+  <div class="ticket">
+    <h1>🚂 IRCTC E-TICKET 🎫</h1>
+    <div class="success">✅ Payment Successful!</div>
 
-<script>
-  // Retrieve booking details from localStorage
-  const bookingDetails = JSON.parse(localStorage.getItem('bookingDetails'));
+    <div class="section">
+      <div class="section-title">👧 Passenger Details</div>
+      <div class="info-line" id="name"></div>
+      <div class="info-line" id="age"></div>
+      <div class="info-line" id="gender"></div>
+      <div class="info-line" id="train"></div>
+      <div class="info-line" id="type"></div>
+    </div>
 
-  if (bookingDetails) {
-    // Display booking details
-    document.getElementById('bookingSummary').innerText = `
-      Passenger Name: ${bookingDetails.passengerName}
-      Age: ${bookingDetails.age}
-      Gender: ${bookingDetails.gender}
-      Train Number: ${bookingDetails.trainNumber}
-      Ticket Type: ${bookingDetails.ticketType}
-    `;
+    <div class="section">
+      <div class="section-title">🧳 Ticket Info</div>
+      <div class="info-line" id="pnr"></div>
+      <div class="info-line" id="coach"></div>
+      <div class="info-line" id="berth"></div>
+      <div class="info-line" id="seat"></div>
+    </div>
 
-    // Generate random PNR, coach, and berth position
-    const pnr = 'PNR-' + Math.floor(1000000000 + Math.random() * 9000000000);
-    const coach = 'Coach-' + Math.floor(1 + Math.random() * 20);
-    const berth = 'Berth-' + ['Lower', 'Middle', 'Upper'][Math.floor(Math.random() * 3)];
+    <!-- <div class="section">
+      <div class="section-title">🔳 QR Code</div>
+      <div class="qr">
+        <img id="qrCodeImage" alt="QR Code" width="180" height="180">
+      </div>
+    </div> -->
 
-    // Display PNR details
-    document.getElementById('pnrDetails').innerText = `
-      PNR: ${pnr}
-      Coach: ${coach}
-      Berth: ${berth}
-    `;
-  } else {
-    document.getElementById('bookingSummary').innerText = 'No booking details found.';
+    <div class="note">
+      📌 This is a IRCTC ticket for demonstrations. Not valid for travel.
+    </div>
+  </div>
+
+  <script>
+    const bookingDetails = JSON.parse(localStorage.getItem('bookingDetails'));
+
+    if (bookingDetails) {
+      const pnr = 'PNR-' + Math.floor(1000000000 + Math.random() * 9000000000);
+      const coach = 'S' + Math.floor(1 + Math.random() * 12);
+      const berth = ['Lower', 'Middle', 'Upper'][Math.floor(Math.random() * 3)];
+      const seat = Math.floor(1 + Math.random() * 72);
+
+      const summaryText = 
+`Name: ${bookingDetails.passengerName}
+Age: ${bookingDetails.age}
+Gender: ${bookingDetails.gender}
+Train No.: ${bookingDetails.trainNumber}
+Ticket Type: ${bookingDetails.ticketType}`;
+
+      const ticketText = 
+`PNR: ${pnr}
+Coach: ${coach}
+Berth Type: ${berth}
+Seat No.: ${seat}`;
+
+      // Populate ticket details
+      document.getElementById('name').innerText = `👦 Name: ${bookingDetails.passengerName}`;
+      document.getElementById('age').innerText = `🎂 Age: ${bookingDetails.age}`;
+      document.getElementById('gender').innerText = `🚻 Gender: ${bookingDetails.gender}`;
+      document.getElementById('train').innerText = `🚄 Train No.: ${bookingDetails.trainNumber}`;
+      document.getElementById('type').innerText = `🎟️ Ticket Type: ${bookingDetails.ticketType}`;
+
+      document.getElementById('pnr').innerText = `🔢 PNR: ${pnr}`;
+      document.getElementById('coach').innerText = `🚃 Coach: ${coach}`;
+      document.getElementById('berth').innerText = `🛏️ Berth Type: ${berth}`;
+      document.getElementById('seat').innerText = `🔢 Seat No.: ${seat}`;
+
+    //   // Generate QR code
+    //   const qrData = `${summaryText} | ${ticketText}`;
+    // const encodedQR = encodeURIComponent(qrData);
+    // const qrCodeURL = `https://chart.googleapis.com/chart?chs=200x200&cht=qr&chl=${encodedQR}&choe=UTF-8`;
+    // document.getElementById('qrCodeImage').src = qrCodeURL;
   }
-</script>
-</body></html>
+  </script>
+</body>
+</html>

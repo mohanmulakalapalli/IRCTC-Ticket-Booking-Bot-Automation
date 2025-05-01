@@ -1,36 +1,109 @@
-<html><head><title>Booking</title></head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Booking</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body, html {
+      height: 100%;
+      margin: 0;
+    }
+
+    .background {
+      background: url("booking_bg.jpg") no-repeat center center/cover;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .form-box {
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(10px);
+      padding: 30px 40px;
+      border-radius: 20px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+      width: 100%;
+      max-width: 500px;
+    }
+
+    h2 {
+      text-align: center;
+      color: #1a2a4f;
+      margin-bottom: 20px;
+    }
+
+    input[type="text"],
+    input[type="number"],
+    select {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 16px;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      background-color: #ff6600;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 15px;
+    }
+
+    button:hover {
+      background-color: #e65c00;
+    }
+  </style>
+</head>
 <body>
-<h2>Booking Details</h2>
-<form id="bookingForm">
-  <input type="text" id="passengerName" placeholder="Passenger Name"><br>
-  <input type="number" id="age" placeholder="Age"><br>
-  <select id="gender">
-    <option>Male</option>
-    <option>Female</option>
-  </select><br>
-  <input type="number" id="trainNumber" placeholder="Train Number"><br>
-  <select id="ticketType">
-    <option>General</option>
-    <option>Tatkal</option>
-  </select><br>
-  <button type="button" onclick="proceedToPay()">Proceed to Pay</button>
-</form>
+  <div class="background">
+    <div class="form-box">
+      <h2>Booking Details</h2>
+      <form id="bookingForm">
+        <input type="text" id="passengerName" placeholder="Passenger Name" required><br>
+        <input type="number" id="age" placeholder="Age" required><br>
+        <select id="gender" required>
+          <option value="">Select Gender</option>
+          <option>Male</option>
+          <option>Female</option>
+        </select><br>
+        <input type="number" id="trainNumber" placeholder="Train Number" required><br>
+        <select id="ticketType" required>
+          <option value="">Select Ticket Type</option>
+          <option>General</option>
+          <option>Tatkal</option>
+        </select><br>
+        <button type="button" onclick="proceedToPay()">Proceed to Pay</button>
+      </form>
+    </div>
+  </div>
 
-<script>
-  function proceedToPay() {
-    const bookingDetails = {
-      passengerName: document.getElementById('passengerName').value,
-      age: document.getElementById('age').value,
-      gender: document.getElementById('gender').value,
-      trainNumber: document.getElementById('trainNumber').value,
-      ticketType: document.getElementById('ticketType').value
-    };
+  <script>
+    function proceedToPay() {
+      const bookingDetails = {
+        passengerName: document.getElementById('passengerName').value,
+        age: document.getElementById('age').value,
+        gender: document.getElementById('gender').value,
+        trainNumber: document.getElementById('trainNumber').value,
+        ticketType: document.getElementById('ticketType').value
+      };
 
-    // Store booking details in localStorage
-    localStorage.setItem('bookingDetails', JSON.stringify(bookingDetails));
-
-    // Redirect to payment page
-    window.location.href = 'payment.html';
-  }
-</script>
-</body></html>
+      localStorage.setItem('bookingDetails', JSON.stringify(bookingDetails));
+      window.location.href = 'payment.html';
+    }
+  </script>
+</body>
+</html>

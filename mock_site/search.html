@@ -1,10 +1,133 @@
-<html><head><title>Search Trains</title></head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Search Trains</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body, html {
+      height: 100%;
+    }
+
+    .background {
+      background: url("search_bg.jpg") no-repeat center center/cover;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .search-box {
+      background: rgba(255, 255, 255, 0.6);
+      backdrop-filter: blur(10px);
+      padding: 30px 40px;
+      border-radius: 20px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+      max-width: 500px;
+      width: 100%;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #1a2a4f;
+    }
+
+    input[type="text"],
+    input[type="date"],
+    select {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 16px;
+    }
+
+    .form-row {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .form-row > * {
+      flex: 1;
+    }
+
+    .checkboxes {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 15px 0;
+    }
+
+    .checkboxes label {
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      background-color: #ff6600;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    button:hover {
+      background-color: #e65c00;
+    }
+  </style>
+</head>
 <body>
-<h2>Search Trains</h2>
-<form>
-  <input type="text" placeholder="From Station"><br>
-  <input type="text" placeholder="To Station"><br>
-  <input type="date"><br>
-  <button type="button" onclick="window.location.href='booking.html'">Search</button>
-</form>
-</body></html>
+  <div class="background">
+    <div class="search-box">
+      <h2>BOOK TICKET</h2>
+      <form>
+        <div class="form-row">
+          <input type="text" placeholder="From Station" required>
+          <input type="date" required>
+        </div>
+        <div class="form-row">
+          <input type="text" placeholder="To Station" required>
+          <select required>
+            <option value="">All Classes</option>
+            <option value="1A">First AC (1A)</option>
+            <option value="2A">Second AC (2A)</option>
+            <option value="3A">Third AC (3A)</option>
+            <option value="SL">Sleeper (SL)</option>
+          </select>
+        </div>
+        <select required>
+          <option value="">GENERAL</option>
+          <option value="LADIES">LADIES</option>
+          <option value="SR.CITIZEN">Senior Citizen</option>
+        </select>
+
+        <div class="checkboxes">
+          <label><input type="checkbox"> Disability Concession</label>
+          <label><input type="checkbox"> Flexible With Date</label>
+          <label><input type="checkbox"> Available Berth</label>
+          <label><input type="checkbox"> Railway Pass</label>
+        </div>
+
+        <button type="button" onclick="window.location.href='booking.html'">Search</button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
