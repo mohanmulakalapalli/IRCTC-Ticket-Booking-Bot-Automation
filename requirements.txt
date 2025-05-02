@@ -4,3 +4,4 @@ webdriver-manager
 pytest-html
 schedule
 smtplib
+requests
