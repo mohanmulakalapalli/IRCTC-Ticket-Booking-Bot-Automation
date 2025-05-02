@@ -20,6 +20,7 @@ URL_Payment = "D:/OS/Desktop/Learning_Software_Related/Python_Automation_project
 username = os.getenv("TEST_USERNAME", "testuser")
 password = os.getenv("TEST_PASSWORD", "testpass")
 
-EMAIL_SENDER = os.getenv("EMAIL_SENDER", "mohanmulakalapalli@gmail.com")
+EMAIL_SENDER = os.getenv("EMAIL_SENDER", "pavankumaryerra9@gmail.com")
 EMAIL_RECEIVER = os.getenv("EMAIL_RECEIVER", "mohanmulakalapalli@gmail.com")
-EMAIL_PASSWORD = os.getenv("EMAIL_PASSWORD", "9849232796")
+EMAIL_PASSWORD = os.getenv("EMAIL_PASSWORD", "bunny8688873902paru")
+
