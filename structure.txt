@@ -1,40 +1,59 @@
 irctc_tatkal_bot/
 │
 ├── main.py                 # Entry point for the automation script
+├── sanity_report_email.py  # Script to send sanity test reports via email
+├── telegram_bot_report.py  # Script to send test reports via Telegram bot
 ├── pytest.ini              # Pytest configuration file
 ├── README.md               # Project documentation
 ├── requirements.txt        # Python dependencies
 ├── .gitignore              # Git ignore file
 │
+├── logs/                   # Logs directory
+│   └── sanity_run.log      # Log file for sanity test runs
+│
 ├── mock_site/              # Mock HTML pages simulating the IRCTC website
-│   ├── booking.html
-│   ├── login.html
-│   ├── payment.html
-│   └── search.html
+│   ├── booking.html        # Mock booking page
+│   ├── login.html          # Mock login page
+│   ├── payment.html        # Mock payment page
+│   ├── search.html         # Mock search page
+│   ├── booking_bg.jpg      # Background image for booking page
+│   ├── login_bg.jpg        # Background image for login page
+│   ├── pay_bg.jpg          # Background image for payment page
+│   └── search_bg.jpg       # Background image for search page
 │
 ├── pages/                  # Selenium Page Object Model scripts
-│   ├── booking_page.py
-│   ├── login_page.py
-│   ├── search_page.py
+│   ├── booking_page.py     # Booking page automation script
+│   ├── login_page.py       # Login page automation script
+│   ├── search_page.py      # Search page automation script
+│   ├── payment_page.py     # Payment page automation script
+│   ├── test_data.py        # Test data for automation scripts
 │   └── __init__.py         # Makes the directory a Python package
 │
 ├── report/                 # Test reports and related assets
-│   ├── test_report.html
-│   ├── test_report_booking.html
-│   ├── test_report_login.html
-│   ├── test_report_search.html
-│   ├── assets/             # Static assets for reports
-│   │   └── style.css
-│   └── archived/           # Optional: Archive old reports
+│   ├── all_tests.html              # Consolidated test report
+│   ├── booking_report.txt          # Text report for booking tests
+│   ├── test_report_booking.html    # Booking test report
+│   ├── test_report_login.html      # Login test report
+│   ├── test_report_search.html     # Search test report
+│   ├── test_report_e2e.html        # End-to-end test report
+│   ├── test_report_L_S_B_P.html    # Combined report for Login, Search, Booking, and Payment
+│   ├── assets/                     # Static assets for reports
+│   │   └── style.css               # CSS for report styling
+│   ├── screenshots/                # Screenshots for test reports
+│   └── archived/                   # Optional: Archive old reports
 │
 ├── tests/                  # Pytest test cases
-│   ├── test_login.py
-│   ├── test_booking.py
-│   ├── test_search.py
+│   ├── test_login.py       # Test cases for login functionality
+│   ├── test_booking.py     # Test cases for booking functionality
+│   ├── test_search.py      # Test cases for search functionality
+│   ├── test_e2e.py         # End-to-end test cases
+│   ├── test_L_S_B_P.py     # Combined test cases for Login, Search, Booking, and Payment
+│   ├── test_scheduler.py   # Test cases for scheduling functionality
+│   ├── driver_setup.py     # WebDriver setup for Selenium
 │   └── __init__.py         # Makes the directory a Python package
 │
 ├── .vscode/                # VS Code-specific settings
-│   └── settings.json
+│   └── settings.json       # VS Code settings for the project
 │
 ├── __pycache__/            # Python bytecode cache (auto-generated)
 │

@@ -24,3 +24,6 @@ EMAIL_SENDER = os.getenv("EMAIL_SENDER", "pavankumaryerra9@gmail.com")
 EMAIL_RECEIVER = os.getenv("EMAIL_RECEIVER", "mohanmulakalapalli@gmail.com")
 EMAIL_PASSWORD = os.getenv("EMAIL_PASSWORD", "bunny8688873902paru")
 
+# Telegram credentials
+BOT_TOKEN = "8190881950:AAFKtHfHrXgxBDOtFLJcAaapG0-OpTANesQ"
+CHAT_ID = "1080852678"

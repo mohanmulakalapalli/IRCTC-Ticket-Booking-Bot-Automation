@@ -4,14 +4,12 @@ import logging
 import requests
 from datetime import datetime
 from main import IRCTCTatkalBot
+from pages.test_data import BOT_TOKEN, CHAT_ID
 
-# Telegram credentials
-BOT_TOKEN = "8190881950:AAFKtHfHrXgxBDOtFLJcAaapG0-OpTANesQ"
-CHAT_ID = "1080852678"
 
 # Setup logging
 os.makedirs("logs", exist_ok=True)
-log_file = "logs/sanity_run.log"
+log_file = "logs/T_sanity_run.log"
 logging.basicConfig(
     filename=log_file,
     level=logging.INFO,
