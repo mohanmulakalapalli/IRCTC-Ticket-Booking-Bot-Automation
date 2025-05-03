@@ -1,61 +1,125 @@
 # IRCTC Ticket Booking Automation (Simulated)
 
-This project demonstrates the automation of IRCTC ticket booking using **Selenium** and **Python**. It uses locally hosted **mock HTML pages** to simulate the IRCTC website for testing and experimentation purposes.
+This project provides a robust simulation of IRCTC ticket booking automation using Selenium and Python. It leverages locally hosted mock HTML pages to replicate the IRCTC website, enabling safe and controlled testing of automation scripts without interacting with the live platform.
+
+## Project Overview
+
+The IRCTC Ticket Booking Automation project is designed to demonstrate and test the automation of ticket booking processes in a simulated environment. By using mock HTML pages and a modular framework, it ensures scalability, maintainability, and safe experimentation.
+
+### Key Features
+
+- **Selenium Automation**: Automates user interactions, including login, train search, ticket booking, and payment workflows.
+- **Mock HTML Pages**: Simulates IRCTC website pages locally for secure and repeatable testing.
+- **Page Object Model (POM)**: Organizes code into modular, maintainable classes for each page, enhancing scalability.
+- **PyTest Integration**: Provides comprehensive test suites with detailed HTML reports for validation.
+- **Sanity Tests**: Includes lightweight scripts to verify core functionalities quickly.
+- **Reporting Capabilities**: Generates and distributes test reports via email and Telegram for efficient monitoring.
+- **Extensible Framework**: Easily adaptable for additional features, test cases, or custom workflows.
 
 ## Project Structure
 
-- **`mock_site/`**: Contains local HTML files that mimic IRCTC's website for simulation purposes.
-- **`pages/`**: Implements the Selenium Page Object Model (POM) for the application's web pages.
-- **`tests/`**: Includes test scripts written with PyTest to validate various automation scenarios.
-- **`main.py`**: Orchestrates the complete ticket booking process.
-- **`requirements.txt`**: Lists the Python dependencies needed for the project.
+- `mock_site/`: Local HTML files simulating IRCTC website pages (`login.html`, `search.html`, `booking.html`, `payment.html`).
+- `pages/`: Selenium POM classes for interacting with simulated web pages.
+- `tests/`: PyTest scripts for validating automation workflows.
+- `sanity/`: Scripts for quick sanity checks of critical functionalities.
+- `reports/`: Tools for generating and sending test reports via email and Telegram.
+- `main.py`: Orchestrates the end-to-end ticket booking automation process.
+- `requirements.txt`: Lists Python dependencies required for the project.
 
 ## Setup and Usage
 
-Follow these steps to set up and run the project:
+### Prerequisites
 
-### 1. Install Dependencies 
+- Python 3.8 or higher
+- Google Chrome browser
+- ChromeDriver compatible with the installed Chrome version
+- Git (for cloning the repository)
 
-Ensure Python is installed on your system, then install the required dependencies:
+### Installation
+
+1. **Clone the Repository**:
+   ```bash
+   git clone https://github.com/mohanmulakalapalli/IRCTC-Ticket-Booking-Bot-Automation.git
+   cd IRCTC-Ticket-Booking-Bot-Automation
+   ```
+
+2. **Install Dependencies**:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+### Running the Automation
+
+1. **Launch the Mock Website**:
+   - Open the HTML files in `mock_site/` (`login.html`, `search.html`, `booking.html`, `payment.html`) using a local server or directly in Google Chrome.
+   - Example: Use Python's HTTP server:
+     ```bash
+     python -m http.server 8000
+     ```
+     Access at `http://localhost:8000/mock_site/login.html`.
+
+2. **Execute the Main Script**:
+   To execute the complete ticket booking flow, run the main.py script:
+
+   ```bash
+   python3 main.py
+
+   ```
+
+### Running Tests
+
+Run test suites using PyTest with HTML reporting:
+
 ```bash
-pip install -r requirements.txt
+pytest tests/ --html=report/all_tests.html
 ```
 
-### 2. Launch the Mock Website
-
-Open the login page of the simulated IRCTC website in your browser:
+Individual test cases:
 ```bash
-mock_site/login.html
-mock_site/search.html
-mock_site/booking.html
-mock_site/payment.html
-```
-### 3. Run the Automation Script
-
-To execute the complete ticket booking flow, run the main.py script:
-```base
-python3 main.py
-```
-### 4. Execute Tests
-
-Run the test cases using PyTest to validate the automation flow:
-```bash
-pytest tests  --html=report/all_tests.html
 pytest tests/test_login.py --html=report/test_report_login.html
 pytest tests/test_search.py --html=report/test_report_search.html
 pytest tests/test_booking.py --html=report/test_report_booking.html
-pytest tests/test_L_S_B_P.py  --html=report/test_report_L_S_B_P.html
+pytest tests/test_L_S_B_P.py --html=report/test_report_L_S_B_P.html
 pytest tests/test_e2e.py --html=report/test_report_e2e.html
 ```
-## Key Features
 
-Selenium Automation: Automates user interactions on the simulated IRCTC website.
+### Running Sanity Tests
 
-Mock HTML Pages: Provides a safe and controlled environment for testing.
+Execute sanity tests for rapid validation:
+```bash
+python3 sanity_report_email.py.py
+```
 
-Page Object Model (POM): Ensures modular and maintainable test scripts.
+### Generating Reports
 
-PyTest Integration: Enables robust testing and validation of the automation flow.
+- **Email Reports**:
+  - Configure email settings in `sanity_report_email.py`.
+  - Run:
+    ```bash
+    python sanity_report_email.py
+    ```
+
+- **Telegram Reports**:
+  - Set up your Telegram bot token in `telegram_bot_report.py`.
+  - Run:
+    ```bash
+    python telegram_bot_report.py
+    ```
+## License
+
+This project is licensed under the [MIT License](LICENSE).
+
+## Contact
+
+For questions, feedback, or support, please reach out:
+
+- **Author**: Mulakalapalli Mohana Krishna
+- **Email**: mohanmulakalapalli@gmail.com
+- **GitHub**: [mohanmulakalapalli](https://github.com/mohanmulakalapalli)
+
+---
+
+*This project is for educational and testing purposes only. It does not interact with the live IRCTC website and should not be used for actual ticket booking.*
 
 
 
