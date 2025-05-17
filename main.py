@@ -3,7 +3,7 @@ from pages.login_page import LoginPage
 from pages.search_page import SearchPage
 from pages.booking_page import BookingPage
 from pages.payment_page import PaymentPage
-from pages.test_data import URL_Login, username, password
+from configurations.test_data import URL_Login, username, password
 import time
 import os
 from selenium.webdriver.support.ui import WebDriverWait

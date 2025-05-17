@@ -35,9 +35,3 @@ class PaymentPage:
             "seat": self.driver.find_element(*self.seat).text,
         }
         return ticket_info
-
-    # def payment(self):
-    #     """Retrieve booking summary and PNR details."""
-    #     booking = self.driver.find_element(*self.bookingSummary)
-    #     pnr = self.driver.find_element(*self.pnrDetails)
-    #     return booking, pnr

@@ -3,12 +3,12 @@ from selenium.webdriver.common.by import By
 class BookingPage:
     def __init__(self, driver):
         self.driver = driver
-        self.name_input = (By.ID, "passengerName")  # Updated to match the ID in booking.html
-        self.age_input = (By.ID, "age")  # Updated to match the ID in booking.html
-        self.gender_select = (By.ID, "gender")  # Updated to match the ID in booking.html
-        self.train_number_input = (By.ID, "trainNumber")  # Updated to match the ID in booking.html
-        self.ticket_type_select = (By.ID, "ticketType")  # Updated to match the ID in booking.html
-        self.proceed_button = (By.XPATH, "//button[text()='Proceed to Pay']")  # No change needed
+        self.name_input = (By.ID, "passengerName")
+        self.age_input = (By.ID, "age")  
+        self.gender_select = (By.ID, "gender")  
+        self.train_number_input = (By.ID, "trainNumber")  
+        self.ticket_type_select = (By.ID, "ticketType")  
+        self.proceed_button = (By.XPATH, "//button[text()='Proceed to Pay']")  
 
     def enter_passenger_details(self, name, age, gender, train_number, ticket_type):
         # Enter passenger name
@@ -31,3 +31,10 @@ class BookingPage:
                 break
         # Click the proceed button
         self.driver.find_element(*self.proceed_button).click()
+
+    def is_payment_page_displayed(self):
+        try:
+            self.driver.find_element(By.XPATH, "//h1[text()='🚂 IRCTC E-TICKET 🎫']")
+            return True
+        except:
+            return False

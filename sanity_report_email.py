@@ -9,7 +9,7 @@ from email.mime.base import MIMEBase
 from email import encoders
 from datetime import datetime
 from main import IRCTCTatkalBot
-from pages.test_data import EMAIL_SENDER, EMAIL_RECEIVER, EMAIL_PASSWORD
+from configurations.test_data import EMAIL_SENDER, EMAIL_RECEIVER, EMAIL_PASSWORD
 
 # Setup logging
 log_dir = "logs"
