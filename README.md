@@ -8,23 +8,28 @@ The IRCTC Ticket Booking Automation project is designed to demonstrate and test 
 
 ### Key Features
 
-- **Selenium Automation**: Automates user interactions, including login, train search, ticket booking, and payment workflows.
-- **Mock HTML Pages**: Simulates IRCTC website pages locally for secure and repeatable testing.
-- **Page Object Model (POM)**: Organizes code into modular, maintainable classes for each page, enhancing scalability.
-- **PyTest Integration**: Provides comprehensive test suites with detailed HTML reports for validation.
-- **Sanity Tests**: Includes lightweight scripts to verify core functionalities quickly.
-- **Reporting Capabilities**: Generates and distributes test reports via email and Telegram for efficient monitoring.
-- **Extensible Framework**: Easily adaptable for additional features, test cases, or custom workflows.
+- **Selenium Automation**: Automates user interactions for login, train search, ticket booking, and payment workflows using the Page Object Model.
+- **Mock HTML Pages**: Simulates IRCTC website pages locally (`mock_site/`) for safe, repeatable testing.
+- **Cross-Browser Support**: Easily run tests on Chrome, Firefox, or Edge using the `--browser` option.
+- **PyTest Integration**: Comprehensive test suites with detailed HTML reports for validation.
+- **Sanity & E2E Tests**: Includes both quick sanity scripts and full end-to-end automation flows.
+- **Logging**: Centralized logging of automation and test runs in the `logs/` directory.
+- **Reporting Capabilities**: Generates and distributes test reports via email and Telegram.
+- **Extensible Framework**: Modular structure for adding new features, test cases, or workflows.
+- **Configuration Management**: Centralized test data and configuration in the `configurations/` directory.
 
 ## Project Structure
 
 - `mock_site/`: Local HTML files simulating IRCTC website pages (`login.html`, `search.html`, `booking.html`, `payment.html`).
 - `pages/`: Selenium POM classes for interacting with simulated web pages.
 - `tests/`: PyTest scripts for validating automation workflows.
+- `configurations/`: Test data and configuration scripts.
 - `sanity/`: Scripts for quick sanity checks of critical functionalities.
 - `reports/`: Tools for generating and sending test reports via email and Telegram.
+- `logs/`: Log files for automation and sanity test runs.
 - `main.py`: Orchestrates the end-to-end ticket booking automation process.
 - `requirements.txt`: Lists Python dependencies required for the project.
+- `utilities/`: Utility scripts and helpers.
 
 ## Setup and Usage
 
@@ -33,6 +38,10 @@ The IRCTC Ticket Booking Automation project is designed to demonstrate and test 
 - Python 3.8 or higher
 - Google Chrome browser
 - ChromeDriver compatible with the installed Chrome version
+- Mozilla Firefox browser
+- GeckoDriver compatible with the installed Firefox version
+- Microsoft Edge browser
+- EdgeDriver compatible with the installed Edge version
 - Git (for cloning the repository)
 
 ### Installation
@@ -63,8 +72,25 @@ The IRCTC Ticket Booking Automation project is designed to demonstrate and test 
 
    ```bash
    python3 main.py
-
    ```
+
+### Cross-Browser Testing
+
+This framework supports Chrome, Firefox, and Edge browsers.  
+To run tests on a specific browser, use the `--browser` option:
+
+```bash
+# For Chrome (default)
+pytest tests/
+
+# For Firefox
+pytest tests/ --browser=firefox
+
+# For Edge
+pytest tests/ --browser=edge
+```
+
+Make sure the corresponding driver (ChromeDriver, GeckoDriver, or EdgeDriver) is installed and available at the specified path in `tests/conftest.py`.
 
 ### Running Tests
 
@@ -87,7 +113,7 @@ pytest tests/test_e2e.py --html=report/test_report_e2e.html
 
 Execute sanity tests for rapid validation:
 ```bash
-python3 sanity_report_email.py.py
+python3 sanity_report_email.py
 ```
 
 ### Generating Reports

@@ -1,0 +1,214 @@
+1747477944528	geckodriver	INFO	Listening on 127.0.0.1:53655
+1747477947865	mozrunner::runner	INFO	Running command: "C:\\Users\\Asus\\AppData\\Local\\Microsoft\\WindowsApps\\firefox.exe" "--marionette" "--remote-debugging-po ... 56" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Asus\\AppData\\Local\\Temp\\rust_mozprofilexkCCLZ"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+Dynamically enable window occlusion 0
+1747477948416	Marionette	INFO	Marionette enabled
+1747477948628	Marionette	INFO	Listening on port 53663
+WebDriver BiDi listening on ws://127.0.0.1:53656
+1747477948714	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: LoginRecipes: "Falling back to a synchronous message for: file://."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: file://."
+1747477952371	Marionette	INFO	Stopped listening on port 53663
+Dynamically enable window occlusion 1
+1747477953496	geckodriver	INFO	Listening on 127.0.0.1:53679
+1747477956955	mozrunner::runner	INFO	Running command: "C:\\Users\\Asus\\AppData\\Local\\Microsoft\\WindowsApps\\firefox.exe" "--marionette" "--remote-debugging-po ... 80" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Asus\\AppData\\Local\\Temp\\rust_mozprofiles9tDs0"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+Dynamically enable window occlusion 0
+1747477957393	Marionette	INFO	Marionette enabled
+1747477957574	Marionette	INFO	Listening on port 53687
+WebDriver BiDi listening on ws://127.0.0.1:53680
+1747477957652	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1747477961175	Marionette	INFO	Stopped listening on port 53687
+Dynamically enable window occlusion 1
+1747477962223	geckodriver	INFO	Listening on 127.0.0.1:53703
+1747477965426	mozrunner::runner	INFO	Running command: "C:\\Users\\Asus\\AppData\\Local\\Microsoft\\WindowsApps\\firefox.exe" "--marionette" "--remote-debugging-po ... 04" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Asus\\AppData\\Local\\Temp\\rust_mozprofilezdmAlq"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+Dynamically enable window occlusion 0
+1747477965843	Marionette	INFO	Marionette enabled
+1747477966022	Marionette	INFO	Listening on port 53710
+WebDriver BiDi listening on ws://127.0.0.1:53704
+1747477966093	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1747477971077	Marionette	INFO	Stopped listening on port 53710
+Dynamically enable window occlusion 1
+1747477972114	geckodriver	INFO	Listening on 127.0.0.1:53733
+1747477975328	mozrunner::runner	INFO	Running command: "C:\\Users\\Asus\\AppData\\Local\\Microsoft\\WindowsApps\\firefox.exe" "--marionette" "--remote-debugging-po ... 34" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Asus\\AppData\\Local\\Temp\\rust_mozprofilei9Pq3l"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+Dynamically enable window occlusion 0
+1747477975748	Marionette	INFO	Marionette enabled
+1747477975951	Marionette	INFO	Listening on port 53742
+WebDriver BiDi listening on ws://127.0.0.1:53734
+1747477976027	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1747477980253	Marionette	INFO	Stopped listening on port 53742
+Dynamically enable window occlusion 1
+1747477997578	geckodriver	INFO	Listening on 127.0.0.1:53777
+1747478000823	mozrunner::runner	INFO	Running command: "C:\\Users\\Asus\\AppData\\Local\\Microsoft\\WindowsApps\\firefox.exe" "--marionette" "--remote-debugging-po ... 78" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Asus\\AppData\\Local\\Temp\\rust_mozprofilefC8dI2"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+Dynamically enable window occlusion 0
+1747478001241	Marionette	INFO	Marionette enabled
+1747478001417	Marionette	INFO	Listening on port 53785
+WebDriver BiDi listening on ws://127.0.0.1:53778
+1747478001488	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1747478006620	Marionette	INFO	Stopped listening on port 53785
+Dynamically enable window occlusion 1
+1747478040163	geckodriver	INFO	Listening on 127.0.0.1:53838
+1747478043302	mozrunner::runner	INFO	Running command: "C:\\Users\\Asus\\AppData\\Local\\Microsoft\\WindowsApps\\firefox.exe" "--marionette" "--remote-debugging-po ... 39" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Asus\\AppData\\Local\\Temp\\rust_mozprofilepIlzPt"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+Dynamically enable window occlusion 0
+1747478043736	Marionette	INFO	Marionette enabled
+1747478043910	Marionette	INFO	Listening on port 53845
+WebDriver BiDi listening on ws://127.0.0.1:53839
+1747478043979	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: LoginRecipes: "Falling back to a synchronous message for: file://."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: file://."
+1747478047351	Marionette	INFO	Stopped listening on port 53845
+Dynamically enable window occlusion 1
+console.error: services.settings: 
+Object
+  - prototype Object
+    - columnNumber = 0
+    - data = null
+    - filename = resource://gre/modules/ServiceRequest.sys.mjs
+    - lineNumber = 126
+    - location = {"name":"open","filename":"resource://gre/modules/ServiceRequest.sys.mjs","sourceId":25,"lineNumber":126,"columnNumber":11,"asyncCause":null,"asyncCaller":null,"caller":{"filename":"resource://services-settings/Utils.sys.mjs","name":"fetch/<","sourceId":24,"lineNumber":268,"columnNumber":15,"asyncCause":null,"asyncCaller":null,"caller":{"filename":"resource://services-settings/Utils.sys.mjs","name":"fetch","sourceId":24,"lineNumber":219,"columnNumber":12,"asyncCause":null,"asyncCaller":null,"caller":{"filename":"resource://services-common/kinto-http-client.sys.mjs","name":"timedFetch/<","sourceId":671,"lineNumber":569,"columnNumber":12,"asyncCause":null,"asyncCaller":null,"caller":{"filename":"resource://services-common/kinto-http-client.sys.mjs","name":"timedFetch","sourceId":671,"lineNumber":544,"columnNumber":12,"asyncCause":null,"asyncCaller":null,"caller":{"filename":"resource://services-common/kinto-http-client.sys.mjs","name":"request","sourceId":671,"lineNumber":634,"columnNumber":33,"asyncCause":null,"asyncCaller":null,"caller":{"filename":"resource://services-common/kinto-http-client.sys.mjs","name":"execute","sourceId":671,"lineNumber":2643,"columnNumber":36,"asyncCause":null,"asyncCaller":null,"caller":{"filename":"resource://services-settings/RemoteSettingsClient.sys.mjs","name":"_fetchChangeset","sourceId":22,"lineNumber":1212,"columnNumber":22,"asyncCause":null,"asyncCaller":null,"caller":{"filename":"resource://services-settings/RemoteSettingsClient.sys.mjs","name":"_importChanges","sourceId":22,"lineNumber":1074,"columnNumber":18,"asyncCause":null,"asyncCaller":null,"caller":{"filename":"resource://services-settings/RemoteSettingsClient.sys.mjs","name":"maybeSync","sourceId":22,"lineNumber":763,"columnNumber":35,"asyncCause":null,"asyncCaller":null,"caller":null,"formattedStack":"maybeSync@resource://services-settings/RemoteSettingsClient.sys.mjs:763:35\n","nativeSavedFrame":{}},"formattedStack":"_importChanges@resource://services-settings/RemoteSettingsClient.sys.mjs:1074:18\nmaybeSync@resource://services-settings/RemoteSettingsClient.sys.mjs:763:35\n","nativeSavedFrame":{}},"formattedStack":"_fetchChangeset@resource://services-settings/RemoteSettingsClient.sys.mjs:1212:22\n_importChanges@resource://services-settings/RemoteSettingsClient.sys.mjs:1074:18\nmaybeSync@resource://services-settings/RemoteSettingsClient.sys.mjs:763:35\n","nativeSavedFrame":{}},"formattedStack":"execute@resource://services-common/kinto-http-client.sys.mjs:2643:36\n_fetchChangeset@resource://services-settings/RemoteSettingsClient.sys.mjs:1212:22\n_importChanges@resource://services-settings/RemoteSettingsClient.sys.mjs:1074:18\nmaybeSync@resource://services-settings/RemoteSettingsClient.sys.mjs:763:35\n","nativeSavedFrame":{}},"formattedStack":"request@resource://services-common/kinto-http-client.sys.mjs:634:33\nexecute@resource://services-common/kinto-http-client.sys.mjs:2643:36\n_fetchChangeset@resource://services-settings/RemoteSettingsClient.sys.mjs:1212:22\n_importChanges@resource://services-settings/RemoteSettingsClient.sys.mjs:1074:18\nmaybeSync@resource://services-settings/RemoteSettingsClient.sys.mjs:763:35\n","nativeSavedFrame":{}},"formattedStack":"timedFetch@resource://services-common/kinto-http-client.sys.mjs:544:12\nrequest@resource://services-common/kinto-http-client.sys.mjs:634:33\nexecute@resource://services-common/kinto-http-client.sys.mjs:2643:36\n_fetchChangeset@resource://services-settings/RemoteSettingsClient.sys.mjs:1212:22\n_importChanges@resource://services-settings/RemoteSettingsClient.sys.mjs:1074:18\nmaybeSync@resource://services-settings/RemoteSettingsClient.sys.mjs:763:35\n","nativeSavedFrame":{}},"formattedStack":"timedFetch/<@resource://services-common/kinto-http-client.sys.mjs:569:12\ntimedFetch@resource://services-common/kinto-http-client.sys.mjs:544:12\nrequest@resource://services-common/kinto-http-client.sys.mjs:634:33\nexecute@resource://services-common/kinto-http-client.sys.mjs:2643:36\n_fetchChangeset@resource://services-settings/RemoteSettingsClient.sys.mjs:1212:22\n_importChanges@resource://services-settings/RemoteSettingsClient.sys.mjs:1074:18\nmaybeSync@resource://services-settings/RemoteSettingsClient.sys.mjs:763:35\n","nativeSavedFrame":{}},"formattedStack":"fetch@resource://services-settings/Utils.sys.mjs:219:12\ntimedFetch/<@resource://services-common/kinto-http-client.sys.mjs:569:12\ntimedFetch@resource://services-common/kinto-http-client.sys.mjs:544:12\nrequest@resource://services-common/kinto-http-client.sys.mjs:634:33\nexecute@resource://services-common/kinto-http-client.sys.mjs:2643:36\n_fetchChangeset@resource://services-settings/RemoteSettingsClient.sys.mjs:1212:22\n_importChanges@resource://services-settings/RemoteSettingsClient.sys.mjs:1074:18\nmaybeSync@resource://services-settings/RemoteSettingsClient.sys.mjs:763:35\n","nativeSavedFrame":{}},"formattedStack":"fetch/<@resource://services-settings/Utils.sys.mjs:268:15\nfetch@resource://services-settings/Utils.sys.mjs:219:12\ntimedFetch/<@resource://services-common/kinto-http-client.sys.mjs:569:12\ntimedFetch@resource://services-common/kinto-http-client.sys.mjs:544:12\nrequest@resource://services-common/kinto-http-client.sys.mjs:634:33\nexecute@resource://services-common/kinto-http-client.sys.mjs:2643:36\n_fetchChangeset@resource://services-settings/RemoteSettingsClient.sys.mjs:1212:22\n_importChanges@resource://services-settings/RemoteSettingsClient.sys.mjs:1074:18\nmaybeSync@resource://services-settings/RemoteSettingsClient.sys.mjs:763:35\n","nativeSavedFrame":{}},"formattedStack":"open@resource://gre/modules/ServiceRequest.sys.mjs:126:11\nfetch/<@resource://services-settings/Utils.sys.mjs:268:15\nfetch@resource://services-settings/Utils.sys.mjs:219:12\ntimedFetch/<@resource://services-common/kinto-http-client.sys.mjs:569:12\ntimedFetch@resource://services-common/kinto-http-client.sys.mjs:544:12\nrequest@resource://services-common/kinto-http-client.sys.mjs:634:33\nexecute@resource://services-common/kinto-http-client.sys.mjs:2643:36\n_fetchChangeset@resource://services-settings/RemoteSettingsClient.sys.mjs:1212:22\n_importChanges@resource://services-settings/RemoteSettingsClient.sys.mjs:1074:18\nmaybeSync@resource://services-settings/RemoteSettingsClient.sys.mjs:763:35\n","nativeSavedFrame":{}}
+    - message = 
+    - name = 
+    - result = 2152071198
+    - stack = open@resource://gre/modules/ServiceRequest.sys.mjs:126:11|fetch/<@resource://services-settings/Utils.sys.mjs:268:15|fetch@resource://services-settings/Utils.sys.mjs:219:12|timedFetch/<@resource://services-common/kinto-http-client.sys.mjs:569:12|timedFetch@resource://services-common/kinto-http-client.sys.mjs:544:12|request@resource://services-common/kinto-http-client.sys.mjs:634:33|execute@resource://services-common/kinto-http-client.sys.mjs:2643:36|_fetchChangeset@resource://services-settings/RemoteSettingsClient.sys.mjs:1212:22|_importChanges@resource://services-settings/RemoteSettingsClient.sys.mjs:1074:18|maybeSync@resource://services-settings/RemoteSettingsClient.sys.mjs:763:35|
+  - prototype Object
+console.error: services.settings: 
+Object
+  - prototype Object
+    - columnNumber = 0
+    - data = null
+    - filename = resource://gre/modules/ServiceRequest.sys.mjs
+    - lineNumber = 126
+    - location = {"name":"open","filename":"resource://gre/modules/ServiceRequest.sys.mjs","sourceId":25,"lineNumber":126,"columnNumber":11,"asyncCause":null,"asyncCaller":null,"caller":{"filename":"resource://services-settings/Utils.sys.mjs","name":"fetch/<","sourceId":24,"lineNumber":268,"columnNumber":15,"asyncCause":null,"asyncCaller":null,"caller":{"filename":"resource://services-settings/Utils.sys.mjs","name":"fetch","sourceId":24,"lineNumber":219,"columnNumber":12,"asyncCause":null,"asyncCaller":null,"caller":{"filename":"resource://services-common/kinto-http-client.sys.mjs","name":"timedFetch/<","sourceId":671,"lineNumber":569,"columnNumber":12,"asyncCause":null,"asyncCaller":null,"caller":{"filename":"resource://services-common/kinto-http-client.sys.mjs","name":"timedFetch","sourceId":671,"lineNumber":544,"columnNumber":12,"asyncCause":null,"asyncCaller":null,"caller":{"filename":"resource://services-common/kinto-http-client.sys.mjs","name":"request","sourceId":671,"lineNumber":634,"columnNumber":33,"asyncCause":null,"asyncCaller":null,"caller":{"filename":"resource://services-common/kinto-http-client.sys.mjs","name":"execute","sourceId":671,"lineNumber":2643,"columnNumber":36,"asyncCause":null,"asyncCaller":null,"caller":{"filename":"resource://services-settings/RemoteSettingsClient.sys.mjs","name":"_fetchChangeset","sourceId":22,"lineNumber":1212,"columnNumber":22,"asyncCause":null,"asyncCaller":null,"caller":{"filename":"resource://services-settings/RemoteSettingsClient.sys.mjs","name":"_importChanges","sourceId":22,"lineNumber":1074,"columnNumber":18,"asyncCause":null,"asyncCaller":null,"caller":{"filename":"resource://services-settings/RemoteSettingsClient.sys.mjs","name":"maybeSync","sourceId":22,"lineNumber":763,"columnNumber":35,"asyncCause":null,"asyncCaller":null,"caller":null,"formattedStack":"maybeSync@resource://services-settings/RemoteSettingsClient.sys.mjs:763:35\n","nativeSavedFrame":{}},"formattedStack":"_importChanges@resource://services-settings/RemoteSettingsClient.sys.mjs:1074:18\nmaybeSync@resource://services-settings/RemoteSettingsClient.sys.mjs:763:35\n","nativeSavedFrame":{}},"formattedStack":"_fetchChangeset@resource://services-settings/RemoteSettingsClient.sys.mjs:1212:22\n_importChanges@resource://services-settings/RemoteSettingsClient.sys.mjs:1074:18\nmaybeSync@resource://services-settings/RemoteSettingsClient.sys.mjs:763:35\n","nativeSavedFrame":{}},"formattedStack":"execute@resource://services-common/kinto-http-client.sys.mjs:2643:36\n_fetchChangeset@resource://services-settings/RemoteSettingsClient.sys.mjs:1212:22\n_importChanges@resource://services-settings/RemoteSettingsClient.sys.mjs:1074:18\nmaybeSync@resource://services-settings/RemoteSettingsClient.sys.mjs:763:35\n","nativeSavedFrame":{}},"formattedStack":"request@resource://services-common/kinto-http-client.sys.mjs:634:33\nexecute@resource://services-common/kinto-http-client.sys.mjs:2643:36\n_fetchChangeset@resource://services-settings/RemoteSettingsClient.sys.mjs:1212:22\n_importChanges@resource://services-settings/RemoteSettingsClient.sys.mjs:1074:18\nmaybeSync@resource://services-settings/RemoteSettingsClient.sys.mjs:763:35\n","nativeSavedFrame":{}},"formattedStack":"timedFetch@resource://services-common/kinto-http-client.sys.mjs:544:12\nrequest@resource://services-common/kinto-http-client.sys.mjs:634:33\nexecute@resource://services-common/kinto-http-client.sys.mjs:2643:36\n_fetchChangeset@resource://services-settings/RemoteSettingsClient.sys.mjs:1212:22\n_importChanges@resource://services-settings/RemoteSettingsClient.sys.mjs:1074:18\nmaybeSync@resource://services-settings/RemoteSettingsClient.sys.mjs:763:35\n","nativeSavedFrame":{}},"formattedStack":"timedFetch/<@resource://services-common/kinto-http-client.sys.mjs:569:12\ntimedFetch@resource://services-common/kinto-http-client.sys.mjs:544:12\nrequest@resource://services-common/kinto-http-client.sys.mjs:634:33\nexecute@resource://services-common/kinto-http-client.sys.mjs:2643:36\n_fetchChangeset@resource://services-settings/RemoteSettingsClient.sys.mjs:1212:22\n_importChanges@resource://services-settings/RemoteSettingsClient.sys.mjs:1074:18\nmaybeSync@resource://services-settings/RemoteSettingsClient.sys.mjs:763:35\n","nativeSavedFrame":{}},"formattedStack":"fetch@resource://services-settings/Utils.sys.mjs:219:12\ntimedFetch/<@resource://services-common/kinto-http-client.sys.mjs:569:12\ntimedFetch@resource://services-common/kinto-http-client.sys.mjs:544:12\nrequest@resource://services-common/kinto-http-client.sys.mjs:634:33\nexecute@resource://services-common/kinto-http-client.sys.mjs:2643:36\n_fetchChangeset@resource://services-settings/RemoteSettingsClient.sys.mjs:1212:22\n_importChanges@resource://services-settings/RemoteSettingsClient.sys.mjs:1074:18\nmaybeSync@resource://services-settings/RemoteSettingsClient.sys.mjs:763:35\n","nativeSavedFrame":{}},"formattedStack":"fetch/<@resource://services-settings/Utils.sys.mjs:268:15\nfetch@resource://services-settings/Utils.sys.mjs:219:12\ntimedFetch/<@resource://services-common/kinto-http-client.sys.mjs:569:12\ntimedFetch@resource://services-common/kinto-http-client.sys.mjs:544:12\nrequest@resource://services-common/kinto-http-client.sys.mjs:634:33\nexecute@resource://services-common/kinto-http-client.sys.mjs:2643:36\n_fetchChangeset@resource://services-settings/RemoteSettingsClient.sys.mjs:1212:22\n_importChanges@resource://services-settings/RemoteSettingsClient.sys.mjs:1074:18\nmaybeSync@resource://services-settings/RemoteSettingsClient.sys.mjs:763:35\n","nativeSavedFrame":{}},"formattedStack":"open@resource://gre/modules/ServiceRequest.sys.mjs:126:11\nfetch/<@resource://services-settings/Utils.sys.mjs:268:15\nfetch@resource://services-settings/Utils.sys.mjs:219:12\ntimedFetch/<@resource://services-common/kinto-http-client.sys.mjs:569:12\ntimedFetch@resource://services-common/kinto-http-client.sys.mjs:544:12\nrequest@resource://services-common/kinto-http-client.sys.mjs:634:33\nexecute@resource://services-common/kinto-http-client.sys.mjs:2643:36\n_fetchChangeset@resource://services-settings/RemoteSettingsClient.sys.mjs:1212:22\n_importChanges@resource://services-settings/RemoteSettingsClient.sys.mjs:1074:18\nmaybeSync@resource://services-settings/RemoteSettingsClient.sys.mjs:763:35\n","nativeSavedFrame":{}}
+    - message = 
+    - name = 
+    - result = 2152071198
+    - stack = open@resource://gre/modules/ServiceRequest.sys.mjs:126:11|fetch/<@resource://services-settings/Utils.sys.mjs:268:15|fetch@resource://services-settings/Utils.sys.mjs:219:12|timedFetch/<@resource://services-common/kinto-http-client.sys.mjs:569:12|timedFetch@resource://services-common/kinto-http-client.sys.mjs:544:12|request@resource://services-common/kinto-http-client.sys.mjs:634:33|execute@resource://services-common/kinto-http-client.sys.mjs:2643:36|_fetchChangeset@resource://services-settings/RemoteSettingsClient.sys.mjs:1212:22|_importChanges@resource://services-settings/RemoteSettingsClient.sys.mjs:1074:18|maybeSync@resource://services-settings/RemoteSettingsClient.sys.mjs:763:35|
+  - prototype Object
+1747478048296	geckodriver	INFO	Listening on 127.0.0.1:53864
+1747478051489	mozrunner::runner	INFO	Running command: "C:\\Users\\Asus\\AppData\\Local\\Microsoft\\WindowsApps\\firefox.exe" "--marionette" "--remote-debugging-po ... 65" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Asus\\AppData\\Local\\Temp\\rust_mozprofileQrziOq"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+Dynamically enable window occlusion 0
+1747478051911	Marionette	INFO	Marionette enabled
+1747478052103	Marionette	INFO	Listening on port 53872
+WebDriver BiDi listening on ws://127.0.0.1:53865
+1747478052177	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: LoginRecipes: "Falling back to a synchronous message for: file://."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: file://."
+1747478057970	Marionette	INFO	Stopped listening on port 53872
+Dynamically enable window occlusion 1
+1747478075177	geckodriver	INFO	Listening on 127.0.0.1:53906
+1747478078394	mozrunner::runner	INFO	Running command: "C:\\Users\\Asus\\AppData\\Local\\Microsoft\\WindowsApps\\firefox.exe" "--marionette" "--remote-debugging-po ... 07" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Asus\\AppData\\Local\\Temp\\rust_mozprofiley7dp4T"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+Dynamically enable window occlusion 0
+1747478078817	Marionette	INFO	Marionette enabled
+1747478078997	Marionette	INFO	Listening on port 53914
+WebDriver BiDi listening on ws://127.0.0.1:53907
+1747478079069	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1747478082725	Marionette	INFO	Stopped listening on port 53914
+Dynamically enable window occlusion 1
+1747478405304	geckodriver	INFO	Listening on 127.0.0.1:54166
+1747478408520	mozrunner::runner	INFO	Running command: "C:\\Users\\Asus\\AppData\\Local\\Microsoft\\WindowsApps\\firefox.exe" "--marionette" "--remote-debugging-po ... 67" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Asus\\AppData\\Local\\Temp\\rust_mozprofileJ6fzdI"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+Dynamically enable window occlusion 0
+1747478408964	Marionette	INFO	Marionette enabled
+1747478409154	Marionette	INFO	Listening on port 54173
+WebDriver BiDi listening on ws://127.0.0.1:54167
+1747478409231	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: LoginRecipes: "Falling back to a synchronous message for: file://."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: file://."
+1747478412814	Marionette	INFO	Stopped listening on port 54173
+Dynamically enable window occlusion 1
+1747478413915	geckodriver	INFO	Listening on 127.0.0.1:54190
+1747478417105	mozrunner::runner	INFO	Running command: "C:\\Users\\Asus\\AppData\\Local\\Microsoft\\WindowsApps\\firefox.exe" "--marionette" "--remote-debugging-po ... 91" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Asus\\AppData\\Local\\Temp\\rust_mozprofiletwkleD"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+Dynamically enable window occlusion 0
+1747478417562	Marionette	INFO	Marionette enabled
+1747478417758	Marionette	INFO	Listening on port 54197
+WebDriver BiDi listening on ws://127.0.0.1:54191
+1747478417847	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1747478421437	Marionette	INFO	Stopped listening on port 54197
+Dynamically enable window occlusion 1
+1747478422460	geckodriver	INFO	Listening on 127.0.0.1:54215
+1747478425659	mozrunner::runner	INFO	Running command: "C:\\Users\\Asus\\AppData\\Local\\Microsoft\\WindowsApps\\firefox.exe" "--marionette" "--remote-debugging-po ... 16" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Asus\\AppData\\Local\\Temp\\rust_mozprofilerNJpzX"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+Dynamically enable window occlusion 0
+1747478426084	Marionette	INFO	Marionette enabled
+1747478426268	Marionette	INFO	Listening on port 54222
+WebDriver BiDi listening on ws://127.0.0.1:54216
+1747478426352	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1747478431649	Marionette	INFO	Stopped listening on port 54222
+Dynamically enable window occlusion 1
+1747478432797	geckodriver	INFO	Listening on 127.0.0.1:54245
+1747478436009	mozrunner::runner	INFO	Running command: "C:\\Users\\Asus\\AppData\\Local\\Microsoft\\WindowsApps\\firefox.exe" "--marionette" "--remote-debugging-po ... 46" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Asus\\AppData\\Local\\Temp\\rust_mozprofileYwyoEV"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+Dynamically enable window occlusion 0
+1747478436464	Marionette	INFO	Marionette enabled
+1747478436648	Marionette	INFO	Listening on port 54252
+WebDriver BiDi listening on ws://127.0.0.1:54246
+1747478436730	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1747478441016	Marionette	INFO	Stopped listening on port 54252
+Dynamically enable window occlusion 1
+1747478458395	geckodriver	INFO	Listening on 127.0.0.1:54288
+1747478461533	mozrunner::runner	INFO	Running command: "C:\\Users\\Asus\\AppData\\Local\\Microsoft\\WindowsApps\\firefox.exe" "--marionette" "--remote-debugging-po ... 89" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Asus\\AppData\\Local\\Temp\\rust_mozprofileBDgZJY"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+Dynamically enable window occlusion 0
+1747478461956	Marionette	INFO	Marionette enabled
+1747478462146	Marionette	INFO	Listening on port 54296
+WebDriver BiDi listening on ws://127.0.0.1:54289
+1747478462227	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1747478467386	Marionette	INFO	Stopped listening on port 54296
+Dynamically enable window occlusion 1
+1747478500870	geckodriver	INFO	Listening on 127.0.0.1:54347
+1747478504088	mozrunner::runner	INFO	Running command: "C:\\Users\\Asus\\AppData\\Local\\Microsoft\\WindowsApps\\firefox.exe" "--marionette" "--remote-debugging-po ... 48" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Asus\\AppData\\Local\\Temp\\rust_mozprofilewwLvGS"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+Dynamically enable window occlusion 0
+1747478504511	Marionette	INFO	Marionette enabled
+1747478504715	Marionette	INFO	Listening on port 54354
+WebDriver BiDi listening on ws://127.0.0.1:54348
+1747478504788	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: LoginRecipes: "Falling back to a synchronous message for: file://."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: file://."
+1747478511020	Marionette	INFO	Stopped listening on port 54354
+Dynamically enable window occlusion 1
+1747478528488	geckodriver	INFO	Listening on 127.0.0.1:54392
+1747478531689	mozrunner::runner	INFO	Running command: "C:\\Users\\Asus\\AppData\\Local\\Microsoft\\WindowsApps\\firefox.exe" "--marionette" "--remote-debugging-po ... 93" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Asus\\AppData\\Local\\Temp\\rust_mozprofileWH6bSu"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+Dynamically enable window occlusion 0
+1747478532107	Marionette	INFO	Marionette enabled
+1747478532284	Marionette	INFO	Listening on port 54399
+WebDriver BiDi listening on ws://127.0.0.1:54393
+1747478532358	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: LoginRecipes: "Falling back to a synchronous message for: file://."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: file://."
+1747478538081	Marionette	INFO	Stopped listening on port 54399
+Dynamically enable window occlusion 1
+1747478555273	geckodriver	INFO	Listening on 127.0.0.1:54434
+1747478558484	mozrunner::runner	INFO	Running command: "C:\\Users\\Asus\\AppData\\Local\\Microsoft\\WindowsApps\\firefox.exe" "--marionette" "--remote-debugging-po ... 35" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Asus\\AppData\\Local\\Temp\\rust_mozprofileVXpS3L"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+Dynamically enable window occlusion 0
+1747478558908	Marionette	INFO	Marionette enabled
+1747478559088	Marionette	INFO	Listening on port 54442
+WebDriver BiDi listening on ws://127.0.0.1:54435
+1747478559159	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1747478562939	Marionette	INFO	Stopped listening on port 54442
+Dynamically enable window occlusion 1

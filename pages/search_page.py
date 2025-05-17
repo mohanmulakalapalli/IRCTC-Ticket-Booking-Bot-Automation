@@ -15,3 +15,10 @@ class SearchPage:
         self.driver.find_element(*self.date_input).send_keys(date)
         self.driver.find_element(*self.checkbox).click()
         self.driver.find_element(*self.search_button).click()
+    
+    def is_booking_page_displayed(self):
+        try:
+            self.driver.find_element(By.XPATH, "//h2[text()='Booking Details']")
+            return True
+        except:
+            return False

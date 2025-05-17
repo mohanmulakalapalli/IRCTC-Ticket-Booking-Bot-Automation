@@ -4,17 +4,31 @@ from pages.login_page import LoginPage
 from pages.search_page import SearchPage
 from pages.booking_page import BookingPage
 from pages.payment_page import PaymentPage
-from tests.driver_setup import driver_setup
-from pages.test_data import URL_Login, URL_Search, URL_Booking, username, password
+from tests.conftest import driver
+from configurations.test_data import URL_Login, username, password
+from utilities.customLogger import LogGen
 
 
 class TestTatkalBooking:
+    """
+    Test class for end-to-end testing of the Ticket booking process."""
+    @pytest.fixture(autouse=True)
+    def Logger(self):
+        """Initialize the logger."""
+        self.logger = LogGen.loggen()   
+        self.logger.info("******* Starting test_E2E **********")
+        yield
+        self.logger.info("******* Ending test_E2E **********")
+
     def screenshot(self):
         screenshots_dir = "report/screenshots"
         os.makedirs(screenshots_dir, exist_ok=True)
     # Login
-    def test_login(self,driver_setup):
-        self.driver = driver_setup
+    @pytest.mark.e2e
+    def test_login(self,driver):
+        self.driver = driver
+        self.driver.get(URL_Login)
+        self.driver.maximize_window()
         screenshot_path = os.path.join("report/screenshots", "Te2e_login_page.png")
         self.driver.save_screenshot(screenshot_path)    
         print(f"Screenshot saved at: {screenshot_path}")
@@ -63,5 +77,8 @@ class TestTatkalBooking:
         screenshot_path = os.path.join("report/screenshots", "Te2e_payment_page.png")
         self.driver.save_screenshot(screenshot_path)    
         print(f"Screenshot saved at: {screenshot_path}")
-        assert "Payment" in self.driver.page_source or self.driver.title 
+        assert "Payment" in self.driver.page_source or self.driver.title
+
+        self.driver.quit()
+      
         

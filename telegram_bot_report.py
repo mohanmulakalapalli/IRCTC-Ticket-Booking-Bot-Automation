@@ -4,7 +4,7 @@ import logging
 import requests
 from datetime import datetime
 from main import IRCTCTatkalBot
-from pages.test_data import BOT_TOKEN, CHAT_ID
+from configurations.test_data import BOT_TOKEN, CHAT_ID
 
 
 # Setup logging

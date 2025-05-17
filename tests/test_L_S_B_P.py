@@ -3,20 +3,30 @@ from pages.login_page import LoginPage
 from pages.search_page import SearchPage
 from pages.booking_page import BookingPage
 from pages.payment_page import PaymentPage
-from tests.driver_setup import driver_setup
+from tests.conftest import driver
+from utilities.customLogger import LogGen
 
-from pages.test_data import URL_Login, URL_Search, URL_Booking, URL_Payment, username, password
+from configurations.test_data import URL_Login, URL_Search, URL_Booking, URL_Payment, username, password
 import os   
 
 class TestTatkalBooking:
     
+    """
+    Test class for Individule testing of the Ticket booking process."""
+    @pytest.fixture(autouse=True)
+    def Logger(self):
+        """Initialize the logger."""
+        self.logger = LogGen.loggen()
+        return self.logger   
     def screenshot(self):
         screenshots_dir = "report/screenshots"
         os.makedirs(screenshots_dir, exist_ok=True)
     # Login
-    @pytest.mark.usefixtures("driver_setup")
-    def test_login(self, driver_setup):
-        self.driver = driver_setup
+    @pytest.mark.usefixtures("driver")
+    def test_login(self, driver):
+        self.driver = driver
+
+        self.logger.info("******* Starting Individule_test_login **********")
         self.driver.get(URL_Login)
         self.driver.maximize_window()
         # Take screenshot of the login page
@@ -28,13 +38,15 @@ class TestTatkalBooking:
         self.login.accept_alert()
         assert "Welcome" in self.driver.page_source or self.driver.title
         print("Login successful")
+        self.logger.info("******* Ending Individule_test_login **********")  
 
    
 
     # Search Trains
-    @pytest.mark.usefixtures("driver_setup")
-    def test_search_trains(self, driver_setup):
-        self.driver = driver_setup
+    @pytest.mark.usefixtures("driver")
+    def test_search_trains(self, driver):
+        self.driver = driver
+        self.logger.info("******* Starting Individule_test_search **********")
         self.driver.get(URL_Search)
         self.driver.maximize_window()
         # Take screenshot of the search page    
@@ -46,12 +58,14 @@ class TestTatkalBooking:
         self.search.search_trains("Delhi", "Mumbai", "2025-04-25")
         assert "Search Results" in self.driver.page_source or self.driver.title
         print("Search successful")
+        self.logger.info("******* Ending Individule_test_search **********")
    
 
     # Booking
-    @pytest.mark.usefixtures("driver_setup")
-    def test_booking(self, driver_setup):
-        self.driver = driver_setup
+    @pytest.mark.usefixtures("driver")
+    def test_booking(self, driver):
+        self.driver = driver
+        self.logger.info("******* Starting Individule_test_booking **********")
         self.driver.get(URL_Booking)
         self.driver.maximize_window()
         # Take screenshot of the booking page
@@ -60,15 +74,18 @@ class TestTatkalBooking:
         print(f"Screenshot saved at: {screenshot_path}")
         # Create an instance of BookingPage
         self.booking = BookingPage(self.driver)
-        self.booking.enter_passenger_details("Ravi", "28", "Male", "123654", "Tatkal")
+        self.booking.enter_passenger_details("Surya", "28", "Male", "123654", "Tatkal")
         print("Booking successful")
         assert "Booking" in self.driver.page_source or self.driver.title
+        print("Booking successful")
+        self.logger.info("******* Ending Individule_test_booking **********")
         
 
     # Assert Payment Page
-    @pytest.mark.usefixtures("driver_setup")
-    def test_payment_page(self, driver_setup):
-        self.driver = driver_setup
+    @pytest.mark.usefixtures("driver")
+    def test_payment_page(self, driver):
+        self.driver = driver
+        self.logger.info("******* Starting Individule_test_payment **********")
         self.driver.get(URL_Payment)
         self.driver.maximize_window()
         # Take screenshot of the payment page   
@@ -90,5 +107,9 @@ class TestTatkalBooking:
         self.driver.save_screenshot(screenshot_path)    
         print(f"Screenshot saved at: {screenshot_path}")
         # Assert Payment Page
-        assert "Payment" in self.driver.page_source or self.driver.title 
+        assert "Payment" in self.driver.page_source or self.driver.title
+        print("Payment successful")
+        self.logger.info("******* Ending Individule_test_payment **********")
+        # Close the driver
+        self.driver.quit()
         

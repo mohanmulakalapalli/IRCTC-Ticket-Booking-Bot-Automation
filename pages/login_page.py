@@ -1,5 +1,5 @@
 from selenium.webdriver.common.by import By
-from selenium.common.exceptions import NoAlertPresentException
+from selenium.common.exceptions import NoAlertPresentException, NoSuchElementException
 
 class LoginPage:
     def __init__(self, driver):
@@ -10,6 +10,7 @@ class LoginPage:
         self.captcha_text = (By.ID, "captcha")
         self.refresh_button = (By.CLASS_NAME, "refresh-button")
         self.login_button = (By.CSS_SELECTOR, "button[type='submit']")
+        self.search_page = (By.XPATH, "//h2[text()='BOOK TICKET']")
 
     def generate_captcha(self):
         """Click the refresh button to generate a new CAPTCHA."""
@@ -41,3 +42,11 @@ class LoginPage:
             alert.dismiss()
         except NoAlertPresentException:
             print("No alert present to dismiss.")
+
+    def issearch_page_redirected(self):
+        """Check if the user is redirected to the search page after login."""
+        try:
+            self.driver.find_element(*self.search_page)
+            return True
+        except NoSuchElementException:
+            return False
