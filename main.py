@@ -14,7 +14,7 @@ from selenium.webdriver.common.by import By
 class IRCTCTatkalBot:
     def __init__(self):
         self.driver = webdriver.Chrome()
-        self.screenshots_dir = "report/screenshots"
+        self.screenshots_dir = "report/screenshots/main"
         os.makedirs(self.screenshots_dir, exist_ok=True)  # Ensure the directory exists
 
     def take_screenshot(self, filename):
@@ -78,9 +78,9 @@ class IRCTCTatkalBot:
         try:
             self.open_login_page()
             self.perform_login()
-            self.search_trains("Delhi", "Mumbai", "2025-05-01")
+            self.search_trains("Delhi", "Mumbai", "2025-07-01")
             passengers = [
-                {"name": "rajat Doe", "age": "32", "gender": "Male", "train_number": "12345", "ticket_type": "Tatkal"}
+                {"name": "John Doe", "age": "52", "gender": "Male", "train_number": "92345", "ticket_type": "Tatkal"}
             ]
             self.book_tickets(passengers)
             self.process_payment()

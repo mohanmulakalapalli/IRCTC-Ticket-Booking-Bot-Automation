@@ -20,9 +20,9 @@ URL_Payment = "D:/OS/Desktop/Learning_Software_Related/Python_Automation_project
 username = os.getenv("TEST_USERNAME", "testuser")
 password = os.getenv("TEST_PASSWORD", "testpass")
 
-EMAIL_SENDER = os.getenv("EMAIL_SENDER", "pavankumaryerra9@gmail.com")
+EMAIL_SENDER = os.getenv("EMAIL_SENDER", "mohan369automation@gmail.com")
 EMAIL_RECEIVER = os.getenv("EMAIL_RECEIVER", "mohanmulakalapalli@gmail.com")
-EMAIL_PASSWORD = os.getenv("EMAIL_PASSWORD", "bunny8688873902paru")
+EMAIL_PASSWORD = os.getenv("EMAIL_PASSWORD", "njms cteo vquy amqb")
 
 # Telegram credentials
 BOT_TOKEN = "8190881950:AAFKtHfHrXgxBDOtFLJcAaapG0-OpTANesQ"

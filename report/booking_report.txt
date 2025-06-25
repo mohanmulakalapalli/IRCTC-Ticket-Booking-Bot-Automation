@@ -1,3 +1,18 @@
-Tatkal Booking Report
-Status: Booking Completed
-Time: 2025-05-03 15:44:18
+🚆 IRCTC Tatkal Booking - Automation Report
+
+Status: ✅ Booking Completed Successfully
+Time: 2025-06-25 23:02:21
+
+Passenger Details:
+Name: 👦 Name: John Doe
+Age: 🎂 Age: 52
+Gender: 🚻 Gender: Male
+Train: 🚄 Train No.: 92345
+Ticket_type: 🎟️ Ticket Type: Tatkal
+
+Ticket Information:
+Pnr: 🔢 PNR: PNR-2123183894
+Coach: 🚃 Coach: S11
+Berth: 🛏️ Berth Type: Middle
+Seat: 🔢 Seat No.: 32
+Screenshot saved at: report/screenshots/main\main_E_ticket.png
