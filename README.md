@@ -155,7 +155,7 @@ python3 sanity_report_email.py
     - [report/test_report_booking.html](report/test_report_booking.html)
     - [report/test_report_L_S_B_P.html](report/test_report_L_S_B_P.html)
     - [report/test_report_e2e.html](report/test_report_e2e.html)
-    -[report/all_tests.html](report/all_tests.html)
+    - [report/all_tests.html](report/all_tests.html)
 
 ## License
 
